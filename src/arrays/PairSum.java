@@ -1,20 +1,16 @@
 package arrays;
 
-import java.util.Arrays;
-import java.util.HashMap;
 import java.util.HashSet;
-import java.util.List;
-import java.util.Map;
 import java.util.Set;
 
 public class PairSum {
 
-	public static void main(String[] args) {
+    public static void main( String[] args ) {
 
-		int arr[] = new int[] { 12, 3, 5, 1, 9, 7 };
-		int target = 11;
-		boolean sumPair = sumPair(arr, target);
-		System.out.println("sumPair is "+  sumPair);
+        int arr[] = new int[]{12, 3, 5, 1, 9, 7};
+        int target = 11;
+        boolean sumPair = sumPair(arr, target);
+        System.out.println("sumPair is " + sumPair);
 
 //		Soln1
 //		for (int i = 0; i < arr.length; i++) {
@@ -49,26 +45,26 @@ public class PairSum {
 //			}
 //		}
 
-	}
+    }
 //	{1,3,5,7,9,12}
 
-	public static boolean sumPair(int arr[], int target) {
+    public static boolean sumPair( int arr[], int target ) {
 
 //		Map<Integer, Integer> hmap = new HashMap<Integer, Integer>();
-		
-	    Set<Integer> shset = new HashSet<Integer>();
 
-		for (int i = 0; i < arr.length; i++) {
+        Set<Integer> shset = new HashSet<Integer>();
 
-			int temp=target-arr[i];
-			if(shset.contains(temp)) {
-				
-				return true;
-			}else {
-				shset.add(arr[i]);
-			}
-		}
-		return false;
+        for (int i = 0; i < arr.length; i++) {
 
-	}
+            int temp = target - arr[i];
+            if (shset.contains(temp)) {
+
+                return true;
+            } else {
+                shset.add(arr[i]);
+            }
+        }
+        return false;
+
+    }
 }

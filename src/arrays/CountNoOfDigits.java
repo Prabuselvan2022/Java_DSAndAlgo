@@ -1,17 +1,15 @@
 package arrays;
 
-import java.util.Arrays;
-
 public class CountNoOfDigits {
 
-	public static void main(String[] args) {
+    public static void main( String[] args ) {
 
-		int arr[] = new int[] { 555, 901, 482, 1771, 5555, 666666, 1 };
+        int arr[] = new int[]{555, 901, 482, 1771, 5555, 666666, 1};
 
-		int findNumbers = findNumbers(arr);
+        int findNumbers = findNumbers(arr);
 
-		System.out.println("findNumbers " + findNumbers);
-	}
+        System.out.println("findNumbers " + findNumbers);
+    }
 
 //	Solution 1
 //	static int findNumbers(int arr[]) {
@@ -30,31 +28,30 @@ public class CountNoOfDigits {
 
 //	Solution 2
 
-	static int findNumbers(int arr[]) {
-		int cnt = 0;
-		for (int num : arr) {
-			if (even(num)) {
-				cnt++;
-			}
-		}
-		return cnt;
-	}
+    static int findNumbers( int arr[] ) {
+        int cnt = 0;
+        for (int num : arr) {
+            if (even(num)) {
+                cnt++;
+            }
+        }
+        return cnt;
+    }
 
-	static boolean even(int num) {
-		int findNoOfDigits = findNoOfDigits(num);
-		return findNoOfDigits % 2 == 0;
-	}
+    static boolean even( int num ) {
+        int findNoOfDigits = findNoOfDigits(num);
+        return findNoOfDigits % 2 == 0;
+    }
 
-	static int findNoOfDigits(int num) {
-		int cnt = 0;
+    static int findNoOfDigits( int num ) {
+        int cnt = 0;
 
-		while (num > 0) {
-			cnt++;
-			num = num / 10;
-		}
-		return cnt;
-	}
-
+        while (num > 0) {
+            cnt++;
+            num = num / 10;
+        }
+        return cnt;
+    }
 
 
 }
