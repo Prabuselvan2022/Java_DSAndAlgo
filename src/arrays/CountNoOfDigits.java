@@ -40,6 +40,11 @@ public class CountNoOfDigits {
 		return cnt;
 	}
 
+	static boolean even(int num) {
+		int findNoOfDigits = findNoOfDigits(num);
+		return findNoOfDigits % 2 == 0;
+	}
+
 	static int findNoOfDigits(int num) {
 		int cnt = 0;
 
@@ -50,9 +55,6 @@ public class CountNoOfDigits {
 		return cnt;
 	}
 
-	static boolean even(int num) {
-		int findNoOfDigits = findNoOfDigits(num);
-		return findNoOfDigits % 2 == 0;
-	}
+
 
 }
