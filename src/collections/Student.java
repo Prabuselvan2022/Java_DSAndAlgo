@@ -1,35 +1,38 @@
 package collections;
 
 public class Student {
-    private int id;
-    private int marks;
+    private String firstname;
+    private String lastname;
 
-    public Student( int id, int marks ) {
-        this.id = id;
-        this.marks = marks;
+    public Student( String firstname, String lastname ) {
+        this.firstname = firstname;
+        this.lastname = lastname;
     }
 
-    public int getId( ) {
-        return id;
+    public String getFirstname( ) {
+        return firstname;
     }
 
-    public void setId( int id ) {
-        this.id = id;
+    public void setFirstname( String firstname ) {
+        this.firstname = firstname;
     }
 
-    public int getMarks( ) {
-        return marks;
+    public void setLastname( String lastname ) {
+        this.lastname = lastname;
     }
 
-    public void setMarks( int marks ) {
-        this.marks = marks;
+    public String getLastname( ) {
+        return lastname;
     }
+
 
     @Override
     public String toString( ) {
         return "Student{" +
-                "id=" + id +
-                ", marks=" + marks +
+                "firstname='" + firstname + '\'' +
+                ", lastname='" + lastname + '\'' +
                 '}';
     }
+
+
 }
